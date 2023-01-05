@@ -1,0 +1,36 @@
+.portfolio .continer .text:hover{
+
+    transform: rotate(40deg);
+    transition-duration: 1s;
+         
+}
+.services .continer .text:hover{
+
+
+    transform: rotate(40deg);
+    transition-duration: 1s;
+
+}
+
+.services .continer .col .srv:hover {
+    display: flex;
+    margin-bottom: 30px;
+  
+  transform: rotateY(360deg);
+  transform-style: preserve-3d;
+  
+  }
+
+
+
+
+.about .continer .text:hover{
+    transform: rotate(40deg);
+    transition-duration: 1s;
+     
+   }
+   .contact .continer .text:hover{
+    transform: rotate(40deg);
+    transition-duration: 1s;
+     
+   }

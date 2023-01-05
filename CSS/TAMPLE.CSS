@@ -1,0 +1,713 @@
+* {
+  box-sizing: border-box;
+  margin: auto;
+  text-align: left;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* progres for using */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:root {
+  --color: #10cab7;
+}
+
+.fa-solid {
+  color: var(--color);
+}
+/* start head */
+.head {
+  background-color: #eee;
+}
+
+.head .continer {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+}
+.head .continer .fa-solid {
+  font-size: 25px;
+  position: relative;
+  top: 10px;
+}
+
+.con-head {
+  background-image: url("../imagies/logo.png");
+  width: 50px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.head .continer .links {
+  position: relative;
+}
+.head .continer .links ul::before {
+  content: "";
+  border-width: 10px;
+
+  border-style: solid;
+  border-color: transparent transparent #eee transparent;
+
+  position: absolute;
+  top: -20px;
+  right: 0px;
+}
+
+.head .continer .links ul {
+  width: 150px;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  background-color: #ddd;
+  position: absolute;
+  right: 0px;
+  top: 36px;
+  display: none;
+}
+.head .continer .links ul li {
+  padding: 1px;
+}
+.head .continer .links ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: black;
+
+  height: 30px;
+  transition-duration: 0.3s;
+}
+.head .continer .links ul li a:hover {
+  padding-right: 92px;
+}
+.head .continer .links ul li:not(:last-child) a {
+  border-bottom: solid 1px #696969;
+}
+
+.head .continer .links:hover ul {
+  display: block;
+}
+/* end head */
+
+/* start landing */
+
+.landing {
+  background-image: url(../imagies/mountain.jpg);
+
+  background-size: cover;
+  height: calc(100vh - 25px);
+}
+.landing .continer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.landing .continer h1 {
+  margin: 0;
+  text-align: center;
+  color: var(--color);
+  margin-bottom: 30px;
+}
+
+.landing .continer p {
+  line-height: 20px;
+  max-width: 250px;
+}
+
+/* end landing */
+/* start center feuter */
+
+.feuter {
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.feuter .continer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  text-align: center;
+
+  grid-gap: 5px;
+}
+
+.fa-solid {
+  font-size: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feuter .feat h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.feuter .feat p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.feuter .continer .feat {
+  padding: 40px;
+  text-align: center;
+  line-height: 1.4;
+
+  transition-duration: 1s;
+}
+.feuter .continer .feat .fa-solid {
+  text-align: center;
+}
+
+.feuter .continer .feat:hover {
+  box-shadow: 0 0 18px 2px #535353;
+}
+
+/* end center feuter  */
+
+/* start services */
+
+.services {
+  text-align: center;
+}
+.services .continer .text {
+  transform: rotate(0deg);
+  transition-duration: 1s;
+}
+.services .continer .text > h3 {
+  margin-top: 8%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #ebeced;
+}
+.services .continer .text > p {
+  margin-top: -3%;
+  text-align: center;
+
+  font-size: 20px;
+  color: #797979;
+}
+
+/* end make srv center */
+
+.services .services-conect {
+  padding-top: 100px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  transform-style: preserve-3d;
+}
+
+.services .services-conect .col {
+  perspective: 400px;
+}
+
+.services .continer .col .srv {
+  display: flex;
+  margin-bottom: 30px;
+
+  transform: rotateY(0deg);
+  transition-duration: 1s;
+}
+.services .continer .col .rotate {
+  transform: rotateY(360deg);
+}
+.services .continer .col .srv i {
+  flex-basis: 60px;
+  flex: 1;
+  margin-top: 0px;
+  margin-right: 20px;
+}
+
+.services .continer .col .srv p {
+  width: 300px;
+  height: 100px;
+  line-height: 25px;
+}
+.services .continer .col .srv h3 {
+  margin-bottom: 15px;
+}
+
+/* part for image or qupe */
+
+.services-conect .col .srv .imag img {
+  width: 400px;
+  height: 300px;
+
+  position: relative;
+}
+.services-conect .col .srv .imag {
+  position: relative;
+}
+
+.services-conect .col .srv .imag::after {
+  content: "";
+  width: 80px;
+  height: 370px;
+  background-color: #2c4755;
+  position: absolute;
+  top: -30px;
+  left: 350px;
+  z-index: -1;
+}
+
+.services .continer .col .srv .fa-solid {
+  text-align: center;
+}
+
+/* start make the srv center */
+
+/* end services */
+
+/* start center portfolio */
+.portfolio {
+  background-color: #fafafa;
+}
+.portfolio .continer .text {
+  transform: rotate(0deg);
+  transition-duration: 1s;
+}
+.portfolio .continer .text > h3 {
+  margin-top: 8%;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #ebeced;
+  padding-top: 120px;
+}
+.portfolio .continer .text > p {
+  margin-top: -3%;
+  text-align: center;
+
+  font-size: 20px;
+  color: #797979;
+}
+
+/* end landing portfolio */
+
+/* start port for portfolio */
+
+.portfolio .portfolio-content img {
+  width: 400px;
+  height: 200px;
+}
+.portfolio .portfolio-content {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 80px;
+}
+.portfolio .portfolio-content .port .txt h3 {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  text-align: left;
+}
+.portfolio .portfolio-content .port .txt p {
+  text-align: left;
+}
+
+.portfolio .portfolio-content .port {
+  transition-duration: 0.4s;
+  padding: 10px;
+}
+
+.portfolio .portfolio-content .port .txt p::selection,
+h3::selection {
+  background-color: var(--color);
+}
+.portfolio .portfolio-content .port .txt {
+  padding: 10px;
+}
+
+.portfolio .portfolio-content .port:hover {
+  box-shadow: 0px 0px 20px 2px #535353;
+  opacity: 0.95;
+}
+/*start for mopile media  */
+
+/* end for mopile media */
+/* end center portfolio */
+
+/* start about us */
+
+/* start text about  */
+
+.about {
+  z-index: 1;
+}
+ .about .continer{
+  
+} 
+.about .continer .text {
+  transform: rotate(0deg);
+  transition-duration: 1s;
+}
+
+.about .continer .text > h1 {
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #ebeced;
+}
+
+.about .continer .text > p {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  bottom: 100px;
+  color: #797979;
+}
+
+/* end text about  */
+
+/* start about  continer */
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about .continer .about-content .abt .txt {
+  position: relative;
+  
+}
+
+.about .continer .about-content .abt .img img {
+  background-color: #d3d3d3;
+  height: 370px;
+  width: 320px;
+
+  position: relative;
+}
+.about .continer .about-content .abt .img::after {
+  content: "";
+  border-left: solid 60px var(--color);
+  border-bottom: solid 60px var(--color);
+  height: 285px;
+  width: 100px;
+  position: absolute;
+  left: 280px;
+  top: -20px;
+  z-index: -1;
+}
+.about .continer .about-content .abt .img::before {
+  content: "";
+  border-left: solid 60px #c4c3c3;
+  height: 425px;
+  width: 100px;
+  position: absolute;
+  left: -5px;
+  top: -8%;
+  z-index: -1;
+}
+
+.about .continer .about-content .abt .txt h4 {
+  padding-bottom: 60px;
+
+  color: #334752;
+
+  line-height: 30px;
+  
+}
+.about .continer .about-content .abt .txt p {
+  padding-top: 20px;
+  color: #797979;
+}
+
+.about .continer .about-content .abt .txt::after {
+  content: "";
+  width: 500px;
+  height: 5px;
+  background-color: var(--color);
+
+  position: absolute;
+  top: 65%;
+  left: 0px;
+}
+
+/* end about continer  */
+/* end about us  */
+
+/* start a contact */
+
+.contact {
+  position: relative;
+
+  background-color: #fafafa;
+  z-index: 1;
+}
+/* .about .continer{
+  
+} */
+.contact .continer .text {
+  transform: rotate(0deg);
+  transition-duration: 1s;
+}
+
+.contact .continer .text > h1 {
+  padding-top: 50px;
+  text-align: center;
+  font-size: 100px;
+  font-weight: bolder;
+  color: #ebeced;
+}
+
+.contact .continer .text > p {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  bottom: 100px;
+  color: #797979;
+}
+.contact .continer .txt h1 {
+  color: #2c4755;
+}
+.contact .continer .txt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  width: 75%;
+}
+
+.finsh {
+  height: 70px;
+  background-color: #2c4755;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+}
+.finsh p span {
+  color: var(--color);
+}
+@media (min-width: 768px) {
+  .continer {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .continer {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .continer {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .about .continer .about-content .abt .txt {
+    width: 500px;
+  }
+}
+
+@media (min-width: 768px), (max-width: 992px) {
+  .about .continer .about-content .abt .img {
+    position: relative;
+    right: 50px;
+  }
+  .about .continer .about-content .abt .txt {
+    width: 350px;
+    position: relative;
+    left: 90px;
+  }
+  .about .continer .about-content .abt .txt::after {
+    content: "";
+    width: 350px;
+    height: 5px;
+    background-color: var(--color);
+
+    position: absolute;
+    top: 65%;
+    left: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .landing .continer p {
+    text-align: center;
+  }
+
+  .services .continer > h3 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .services-conect .col .srv .imag img {
+    width: 300px;
+    height: 230px;
+
+    position: relative;
+  }
+  .services-conect .col .srv .imag::after {
+    content: "";
+    width: 50px;
+    height: 280px;
+    background-color: #2c4755;
+    position: absolute;
+    top: -20px;
+    left: 265px;
+    z-index: -1;
+  }
+  .services .continer .text > h3 {
+    margin-top: 8%;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #ebeced;
+  }
+  .services .continer .text > p {
+    margin-top: -3%;
+    text-align: center;
+
+    font-size: 15px;
+    color: #797979;
+  }
+
+  .services .continer .srv {
+    flex-direction: column;
+  }
+
+  .services .continer .col .srv .fa-solid {
+    margin: auto;
+    padding-bottom: 25px;
+  }
+  .services .continer .col .srv p {
+    text-align: center;
+  }
+  .services .continer .col .srv h3 {
+    text-align: center;
+  }
+  .portfolio .continer .text > h3 {
+    font-size: 60px;
+    padding-top: 30px;
+  }
+  .portfolio .continer .text > p {
+    font-size: 10px;
+    margin-top: -5%;
+  }
+  .portfolio .portfolio-content img {
+    width: 350px;
+  }
+  .portfolio .portfolio-content .port {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .portfolio .portfolio-content {
+    gap: 20px;
+  }
+  .about .continer .about-content .abt .txt::after {
+    content: "";
+    width: 350px;
+    height: 5px;
+    background-color: var(--color);
+
+    position: absolute;
+    top: 57%;
+    left: 0px;
+  }
+  .about .continer .text > h1 {
+    font-size: 60px;
+  }
+  .about .continer .text > p {
+    font-size: 15px;
+    position: relative;
+    bottom: 70px;
+  }
+  .about .continer .about-content .abt .img {
+    background-color: #d3d3d3;
+  }
+  .about .continer .about-content .abt .txt {
+    position: relative;
+    top: 70px;
+    left: -2px;
+    padding-bottom: 50px;
+    
+  }
+  .about .continer .about-content .abt .txt h4 {
+text-align: center;
+  }
+    .about .continer .about-content .abt .txt p
+     {
+    
+    text-align: center;
+    
+    }
+  .about .continer .about-content .abt .img img {
+    width: 200px;
+    height: 250px;
+  }
+  .about .continer .about-content .abt .img::before {
+    content: "";
+    border-left: solid 50px #c4c3c3;
+    height: 295px;
+    width: 100px;
+    position: absolute;
+    left: -5px;
+    top: -8%;
+    z-index: -1;
+  }
+  .about .continer .about-content .abt .img::after {
+    content: "";
+    border-left: solid 50px var(--color);
+    border-bottom: solid 50px var(--color);
+    height: 200px;
+    width: 60px;
+    position: absolute;
+    left: 170px;
+    top: -20px;
+    z-index: -1;
+  }
+  .contact .continer .text > h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #ebeced;
+  }
+
+  .contact .continer .text > p {
+    font-size: 15px;
+    position: relative;
+    bottom: 65px;
+    color: #797979;
+  }
+
+  .contact .continer .txt {
+    padding-bottom: 100px;
+  
+  }
+}
+/* end a contact */
+
+/* fixed some er0rr for 
+responsive project and criative test user  */
+@media (max-width: 700px) {
+  .about .continer{
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+
+
+  }
+}
